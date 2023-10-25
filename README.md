@@ -28,5 +28,4 @@ Install requirements
 
 ## Acknowledgements
 
-The work is funded by the Federal Ministry of Education and Research and financed by the European Union within the project
-EAsyAnon - Empfehlungs- und Auditsystem zur Anonymisierung.
+The research project EAsyAnon (“Verbundprojekt: Empfehlungs- und Auditsystem zur Anonymisierung”, funding indicator: 16KISA128K) is funded by the European Union under the umbrella of the funding guideline “Forschungsnetzwerk Anonymisierung für eine sichere Datennutzung” from the German Federal Ministry of Education and Research (BMBF).
