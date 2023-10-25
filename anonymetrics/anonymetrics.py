@@ -85,8 +85,8 @@ def get_groups(df: pd.DataFrame, qa_indices: List[int]) -> List[pd.DataFrame]:
     """
 
     # Group the DataFrame by the quasi identifiers
-    groupby_cols = df.columns[qa_indices].tolist()
-    grouped = df.groupby(groupby_cols)
+    groupby_col = df.columns[qa_indices].tolist()[0]  # Extract the single column name
+    grouped = df.groupby(groupby_col)
 
     # Get the list of equivalence classes as DataFrames
     groups = [group for _, group in grouped]
