@@ -3,7 +3,7 @@ Implementation of best practice methods for data anonymization.
 
 ## Getting started
 
-Set up Conda environment Python 3.11 (anonymization3.11)
+Set up Conda environment Python 3.11 (anonymization311)
 
 ```conda create -n anonymization311 python=3.11```
 
