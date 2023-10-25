@@ -2,7 +2,7 @@ import sys
 import unittest
 import pandas as pd
 from anonymize.generalize import generalize_categorical, discretize
-# from anonymetrics.anonymetrics import calculate_k_anonymity
+from anonymetrics.anonymetrics import calculate_k_anonymity
 
 sys.path.append(".")
 
@@ -18,8 +18,8 @@ class TestGeneralizations(unittest.TestCase):
 
         df = pd.DataFrame(users)
 
-        # k = calculate_k_anonymity(df, qa_indices=[0])
-        # self.assertEqual(k, 1)
+        k = calculate_k_anonymity(df, qa_indices=[0])
+        self.assertEqual(k, 1)
 
         discretize(df, 1, 5.0)
 
@@ -37,12 +37,12 @@ class TestGeneralizations(unittest.TestCase):
             'Label 2': ['foo', 'bar', 'cat', 'dog', 'bird']
         })
 
-        # k = calculate_k_anonymity(df, qa_indices=[1, 2])
-        # self.assertEqual(k, 1)
+        k = calculate_k_anonymity(df, qa_indices=[1, 2])
+        self.assertEqual(k, 1)
 
         # Call the function to generalize categorical attributes
         generalize_categorical(df, [1, 2], ['cat', 'dog', 'bird', 'eagle'])
         generalize_categorical(df, [1, 2], ['foo', 'bar'])
 
-        # k = calculate_k_anonymity(df, qa_indices=[1, 2])
-        # self.assertEqual(k, 2)
+        k = calculate_k_anonymity(df, qa_indices=[1, 2])
+        self.assertEqual(k, 2)
