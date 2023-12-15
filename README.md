@@ -19,6 +19,15 @@ Install requirements
 
 ```pip3 install -r requirements.txt```
 
+Download datasets
+
+1. create folder datasets
+2. download and extract https://archive.ics.uci.edu/static/public/2/adult.zip
+3. add folders in the created folder datasets (e.g. datasets/adult)
+4. in datasets/adult/adult.data add ''age,workclass,fnlwgt,education,education-num,marital-status,occupation,relationship,race,sex,capital-gain,capital-loss,hours-per-week,native-country,income
+'' in first line 
+5. in datasets/adult/adult.test add ''age,workclass,fnlwgt,education,education-num,marital-status,occupation,relationship,race,sex,capital-gain,capital-loss,hours-per-week,native-country,income
+'' in second line 
 
 ## Reproducibility
 
