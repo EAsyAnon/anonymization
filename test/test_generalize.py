@@ -4,10 +4,8 @@ import pandas as pd
 from anonymize.generalize import generalize_categorical, discretize
 from anonymetrics.anonymetrics import calculate_k_anonymity
 
-sys.path.append(".")
 
-
-class TestGeneralizations(unittest.TestCase):
+class TestGeneralize(unittest.TestCase):
     def test_discretize(self):
         # Define user data
         users = {
@@ -46,3 +44,7 @@ class TestGeneralizations(unittest.TestCase):
 
         k = calculate_k_anonymity(df, qa_indices=[1, 2])
         self.assertEqual(k, 2)
+
+
+if __name__ == '__main__':
+    unittest.main()

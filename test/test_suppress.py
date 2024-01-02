@@ -4,10 +4,8 @@ import pandas as pd
 from anonymize.suppress import suppress_categorical, suppress_float, remove_groups
 from anonymetrics.anonymetrics import get_groups
 
-sys.path.append(".")
 
-
-class TestGeneralizations(unittest.TestCase):
+class TestSuppress(unittest.TestCase):
     def test_suppress_float(self):
         # Define user data
         users = {

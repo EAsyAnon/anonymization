@@ -29,6 +29,10 @@ Download datasets
 5. in datasets/adult/adult.test add ''age,workclass,fnlwgt,education,education-num,marital-status,occupation,relationship,race,sex,capital-gain,capital-loss,hours-per-week,native-country,income
 '' in second line
 
+## Tests
+
+````python -m unittest````
+
 ## Acknowledgements
 
 The research project EAsyAnon (“Verbundprojekt: Empfehlungs- und Auditsystem zur Anonymisierung”, funding indicator: 16KISA128K) is funded by the European Union under the umbrella of the funding guideline “Forschungsnetzwerk Anonymisierung für eine sichere Datennutzung” from the German Federal Ministry of Education and Research (BMBF).

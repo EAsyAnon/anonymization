@@ -4,11 +4,11 @@ import sys
 sys.path.append(".")
 
 from anonymetrics.anonymetrics import calculate_k_anonymity, calculate_l_diversity, get_groups, calculate_t_closeness, \
-    get_group_sizes, get_count_per_group_size, plot_count_per_group_size
+    get_group_sizes, get_count_per_group_size
 from anonymize.generalize import *
 
 
-class TestMetrics(unittest.TestCase):
+class TestAnonymetrics(unittest.TestCase):
 
     def test_calculate_k_anonymity(self):
         # Create a test DataFrame with quasi-identifiers
@@ -145,3 +145,7 @@ class TestMetrics(unittest.TestCase):
         count_per_group_size = get_count_per_group_size(df, qa_indices)
 
         np.testing.assert_array_equal(expected_count_per_group_size, count_per_group_size)
+
+
+if __name__ == '__main__':
+    unittest.main()
