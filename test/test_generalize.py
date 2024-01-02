@@ -1,4 +1,3 @@
-import sys
 import unittest
 import pandas as pd
 from anonymize.generalize import generalize_categorical, discretize

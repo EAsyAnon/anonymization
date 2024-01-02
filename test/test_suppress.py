@@ -1,4 +1,3 @@
-import sys
 import unittest
 import pandas as pd
 from anonymize.suppress import suppress_categorical, suppress_float, remove_groups

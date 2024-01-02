@@ -1,7 +1,4 @@
 import unittest
-import sys
-
-sys.path.append(".")
 
 from anonymetrics.anonymetrics import calculate_k_anonymity, calculate_l_diversity, get_groups, calculate_t_closeness, \
     get_group_sizes, get_count_per_group_size
