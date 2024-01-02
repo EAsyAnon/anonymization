@@ -45,9 +45,19 @@ def suppress_categorical(df: pd.DataFrame, attribute_value: str, column_index: i
     # get unique values in the column
     unique_values = df[column_name].unique()
 
-    # replace attribute_value with unique_values
-    df.loc[df[column_name] == attribute_value, column_name] \
-        = [frozenset(unique_values)] * len(df[df[column_name] == attribute_value])
+    frozenset_value = [val for val in unique_values if isinstance(val, frozenset)]
+
+    unique_values = [val for val in unique_values if not isinstance(val, frozenset)]
+
+    print(frozenset_value)
+
+    if len(frozenset_value) != 0:
+        df.loc[df[column_name] == attribute_value, column_name] \
+            = [frozenset_value[0]] * len(df[df[column_name] == attribute_value])
+    else:
+        # replace attribute_value with unique_values
+        df.loc[df[column_name] == attribute_value, column_name] \
+            = [frozenset(unique_values)] * len(df[df[column_name] == attribute_value])
 
 
 def remove_groups(df: pd.DataFrame, qa_indices: List[int], k: int):

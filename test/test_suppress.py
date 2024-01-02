@@ -44,6 +44,16 @@ class TestSuppress(unittest.TestCase):
         # Assert that the output matches the expected output
         pd.testing.assert_frame_equal(self.df, expected_output)
 
+        # Call the suppress_categorical function
+        suppress_categorical(self.df, 'bird', 0)
+
+        # Expected output
+        expected_output = pd.DataFrame({
+            'A': ['cat', frozenset({'bird', 'dog', 'cat'}), frozenset({'bird', 'dog', 'cat'}), frozenset({'bird', 'dog', 'cat'}), frozenset({'bird', 'dog', 'cat'})],
+            'B': ['apple', 'orange', 'banana', 'apple', 'banana'],
+            'C': ['red', 'blue', 'red', 'green', 'blue']
+        })
+
     def test_remove_groups(self):
         # Create a DataFrame for testing
         df = pd.DataFrame({
