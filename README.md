@@ -3,11 +3,11 @@ Implementation of best practice methods for data anonymization.
 
 ## Getting started
 
-Set up Conda environment Python 3.11 (anonymization311)
+Set up a Conda environment with Python 3.11 (anonymization311)
 
 ```conda create -n anonymization311 python=3.11```
 
-Look, where conda environment is stored
+Look, where this conda environment is stored
 
 ```conda info --envs```
 
@@ -27,13 +27,7 @@ Download datasets
 4. in datasets/adult/adult.data add ''age,workclass,fnlwgt,education,education-num,marital-status,occupation,relationship,race,sex,capital-gain,capital-loss,hours-per-week,native-country,income
 '' in first line 
 5. in datasets/adult/adult.test add ''age,workclass,fnlwgt,education,education-num,marital-status,occupation,relationship,race,sex,capital-gain,capital-loss,hours-per-week,native-country,income
-'' in second line 
-
-## Reproducibility
-
-
-## Documentation
-
+'' in second line
 
 ## Acknowledgements
 
