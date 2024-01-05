@@ -5,7 +5,7 @@ from anonymetrics.anonymetrics import get_groups, calculate_l_diversity, \
     calculate_sensitive_attr_prob_dist, emd_categorical
 
 
-def suppress_float(df: pd.DataFrame, column_index: int) -> pd.DataFrame:
+def suppress_float(df: pd.DataFrame, column_index: int):
     """
     Suppresses float attributes in one column in the given dataframe by assigning the mean of values in the column.
 

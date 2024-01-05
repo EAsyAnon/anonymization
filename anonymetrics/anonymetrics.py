@@ -305,9 +305,6 @@ def get_closenesses(df: pd.DataFrame, qa_indices: List[int], sa_index: int) -> n
     numpy.ndarray
         An array containing the closeness per group.
     """
-    groups = get_groups(df, qa_indices)
-
-    attr_value_type = df.iloc[:, sa_index].dtype.name
 
     groups = get_groups(df, qa_indices)
     dist_dataset = calculate_sensitive_attr_prob_dist(df, sa_index)
@@ -369,8 +366,6 @@ def plot_count_per_group_size(count_per_group_size: np.ndarray):
     -----------
     count_per_group_size : numpy.ndarray
         An array containing the count per group size.
-    shift : integer
-        First integer value of x-labels in plot.
 
     Returns
     -----------

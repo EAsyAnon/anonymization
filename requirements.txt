@@ -127,4 +127,4 @@ websocket-client==1.5.1
 wheel==0.38.4
 widgetsnbextension==4.0.5
 zipp==3.13.0
-gensim~=4.3.2
+gensim==4.3.2

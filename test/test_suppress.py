@@ -16,7 +16,7 @@ class TestSuppress(unittest.TestCase):
         # Create a DataFrame
         df = pd.DataFrame(users)
 
-        # Add a attribute column with integer values
+        # Add an attribute column with integer values
         df['credit_score'] = [720, 680, 590, 650, 780]
 
         suppress_float(df, 3)
@@ -54,6 +54,9 @@ class TestSuppress(unittest.TestCase):
             'C': ['red', 'blue', 'red', 'green', 'blue']
         })
 
+        pd.testing.assert_frame_equal(self.df, expected_output)
+
+
     def test_remove_groups(self):
         # Create a DataFrame for testing
         df = pd.DataFrame({
@@ -64,7 +67,6 @@ class TestSuppress(unittest.TestCase):
 
         # Test if groups with less than 2 records are removed correctly
 
-        groups = get_groups(df, [0, 1])
         remove_groups(df, [0, 1], 2)
 
         expected_result = pd.DataFrame({
