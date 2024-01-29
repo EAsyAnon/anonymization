@@ -22,6 +22,7 @@ jobs:
       run: |
         pip install numpy
         pip install pandas
+        pip install matplotlib
         # Installieren Sie hier weitere Abhängigkeiten
 
     - name: Install pdoc
