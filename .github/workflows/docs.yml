@@ -1,0 +1,40 @@
+name: Generate and Deploy Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install Dependencies
+      run: |
+        pip install numpy
+        pip install pandas
+        # Installieren Sie hier weitere Abhängigkeiten
+
+    - name: Install pdoc
+      run: pip install pdoc
+
+    - name: Generate Documentation
+      run: pdoc --output-dir docs anonymize/__init__.py 
+      
+    - name: Upload Documentation to FTP
+      uses: sebastianpopp/ftp-action@master
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localDir: "docs"
+        remoteDir: "/anonymization"  
