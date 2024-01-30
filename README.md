@@ -2,6 +2,12 @@
 Implementation and overview of methods for data anonymization. The implementations restrict on tabular data
 such as microdata. The repository is work in process in the project **[EAsyAnon](#acknowledgements)**.
 
+## Documentation
+
+Documentations can be found at the project webpage:
+**[EAsyAnon/docs/anonymization/anonymize](https://www.easyanon.de/docs/anonymization/anonymize/anonymize.html)**.
+**[EAsyAnon/docs/anonymization/anonymetrics](https://www.easyanon.de/docs/anonymization/anonymetrics/anonymetrics.html)**.
+
 ## Getting started
 
 Set up a Conda environment with Python 3.11 (anonymization311)
