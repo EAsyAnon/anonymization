@@ -128,3 +128,4 @@ wheel==0.38.4
 widgetsnbextension==4.0.5
 zipp==3.13.0
 gensim==4.3.2
+sdv==1.14.0
